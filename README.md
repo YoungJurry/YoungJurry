@@ -37,12 +37,12 @@ Persistent, in-process multi-agent collaboration for Pi.
 </td>
 <td width="50%" valign="top">
 
-### [pi-subagent-lite](https://github.com/YoungJurry/pi-subagent-lite)
-Lightweight subagents with parallel execution and isolated context.
+### [pi-web-lite](https://github.com/YoungJurry/pi-web-lite)
+Lightweight web search and fetch extension with routing and failover for Pi.
 
-支持并行执行与上下文隔离的轻量级子智能体扩展。
+为 Pi 提供多引擎路由与故障转移的轻量级网页搜索扩展。
 
-`TypeScript` `LLM` `Automation`
+`TypeScript` `Web Search` `AI Agent`
 
 </td>
 </tr>
