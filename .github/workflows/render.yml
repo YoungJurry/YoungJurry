@@ -46,6 +46,7 @@ jobs:
           cp -R dist /tmp/profile-dist
           git checkout --orphan output
           git rm -rf .
+          git clean -fdx
           cp -R /tmp/profile-dist/. .
           git add .
           git config user.name "github-actions[bot]"
