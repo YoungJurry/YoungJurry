@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/YoungJurry/YoungJurry/output/profile-signal.svg" width="100%" alt="YoungJurry — live developer signal" />
+<img src="https://raw.githubusercontent.com/YoungJurry/YoungJurry/output/profile-signal.svg?v=2" width="100%" alt="YoungJurry — live developer signal" />
 
 <br>
 
