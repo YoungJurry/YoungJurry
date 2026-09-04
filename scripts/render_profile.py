@@ -13,7 +13,7 @@ from pathlib import Path
 USERNAME = "YoungJurry"
 API = "https://api.github.com"
 GRAPHQL = "https://api.github.com/graphql"
-OUT = Path("dist/profile-signal.svg")
+OUT = Path("dist/profile-cover.svg")
 
 
 def request(url: str, token: str, payload: dict | None = None):
