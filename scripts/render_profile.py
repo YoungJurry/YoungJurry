@@ -3,6 +3,7 @@
 
 from __future__ import annotations
 
+import base64
 import json
 import os
 import urllib.request
@@ -13,7 +14,7 @@ from pathlib import Path
 USERNAME = "YoungJurry"
 API = "https://api.github.com"
 GRAPHQL = "https://api.github.com/graphql"
-OUT = Path("dist/profile-cover.svg")
+OUT = Path("dist/profile-cover-v2.svg")
 
 
 def request(url: str, token: str, payload: dict | None = None):
@@ -79,6 +80,8 @@ def render(repos: list[dict], total: int, days: list[dict]) -> str:
     circumference = 2 * 3.14159 * 57
     dash = circumference * energy / 100
     updated = datetime.now(timezone.utc).strftime("%Y.%m.%d")
+    font_regular = base64.b64encode(Path("assets/JetBrainsMono-Regular.ttf").read_bytes()).decode()
+    font_bold = base64.b64encode(Path("assets/JetBrainsMono-Bold.ttf").read_bytes()).decode()
 
     metrics = [
         ("REPOSITORIES", "仓库", str(len(owned))),
@@ -118,11 +121,13 @@ def render(repos: list[dict], total: int, days: list[dict]) -> str:
   <clipPath id="card-clip"><rect x="646" y="77" width="198" height="174" rx="16"/></clipPath>
 </defs>
 <style>
-  text {{ font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif }}
-  .mono {{ font-family:"SFMono-Regular",Consolas,"Liberation Mono",monospace }}
+  @font-face {{ font-family:"JetBrains Profile"; src:url("data:font/ttf;base64,{font_regular}") format("truetype"); font-weight:400 }}
+  @font-face {{ font-family:"JetBrains Profile"; src:url("data:font/ttf;base64,{font_bold}") format("truetype"); font-weight:700 }}
+  text {{ font-family:"JetBrains Profile","JetBrainsMono Nerd Font","JetBrains Mono","Noto Sans CJK SC",monospace }}
+  .mono {{ font-family:"JetBrains Profile","JetBrainsMono Nerd Font","JetBrains Mono","Noto Sans CJK SC",monospace }}
   .muted {{ fill:#7d8799 }} .divider {{ stroke:#273044 }}
-  .metric-label {{ fill:#667085; font:600 9px "SFMono-Regular",Consolas,monospace; letter-spacing:1px }}
-  .metric-value {{ fill:#e8edf5; font:600 23px Inter,ui-sans-serif,sans-serif }}
+  .metric-label {{ fill:#667085; font-size:9px; font-weight:700; letter-spacing:1px }}
+  .metric-value {{ fill:#e8edf5; font-size:23px; font-weight:700 }}
   .blink {{ animation:blink 1.15s steps(2,end) infinite }}
   .float {{ animation:float 3.2s ease-in-out infinite; transform-box:fill-box; transform-origin:center }}
   .scan {{ animation:scan 4.5s linear infinite }}
