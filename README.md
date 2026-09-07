@@ -1,12 +1,9 @@
-<div align="center">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/YoungJurry/YoungJurry/output/cover-editorial-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/YoungJurry/YoungJurry/output/cover-editorial-light.svg">
+  <img src="https://raw.githubusercontent.com/YoungJurry/YoungJurry/output/cover-editorial-light.svg" width="100%" alt="youngshine — Small tools. Better workflows. 小工具，让日常更顺手。">
+</picture>
 
-<img src="https://raw.githubusercontent.com/YoungJurry/YoungJurry/output/profile-cover-v2.svg" width="100%" alt="YoungJurry — live developer signal" />
-
-<br>
-
-<code>LINUX</code>&nbsp; <code>WAYLAND</code>&nbsp; <code>AI AGENTS</code>&nbsp; <code>TERMINAL UX</code>
-
-</div>
 
 ## `// HELLO / 你好`
 
@@ -91,7 +88,7 @@ Systems      Linux · C · Shell · GitHub Actions
 
 <div align="center">
 
-<sub><code>JURRY-01</code> refreshes this page every day from real GitHub activity.</sub><br>
-<sub><code>JURRY-01</code> 每天根据真实 GitHub 活动刷新本页。</sub>
+<sub>Built with care. Updated daily from public GitHub activity.</sub><br>
+<sub>用心打磨，每日依据公开 GitHub 活动更新。</sub>
 
 </div>
